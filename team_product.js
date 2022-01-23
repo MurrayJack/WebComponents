@@ -69,17 +69,11 @@
   `;
 
   class Product extends HTMLElement {
-    static get observedAttributes() {
-      return ["amount"];
-    }
-
     constructor() {
       super();
 
       this.attachShadow({ mode: "open" });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
-
-      this.listContainer = this.shadowRoot.querySelector("div");
     }
   }
 
